@@ -19,7 +19,9 @@
     "pg": "^8.8.0"
   },
   "scripts": {
+    "build": "tsc",
     "dev": "nodemon ./src/index.ts",
-    "migrate": "prisma migrate dev --name init"
+    "migrate": "prisma migrate dev --name init",
+    "prisma:studio": "npx prisma studio"
   }
 }
