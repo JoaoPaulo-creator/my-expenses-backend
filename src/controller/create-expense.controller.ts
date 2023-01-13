@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import CreateExpenseSerive from "../services/CreateExpenseService"
+import CreateExpenseSerive from "../services/create-expense.service"
 
 export default new class ExpenseController {
 
