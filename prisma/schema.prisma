@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Expenses {
-  id        Int      @id @default(autoincrement())
+  id        String   @id @unique @default(uuid())
   title     String
   createdAt DateTime @default(now())
 }

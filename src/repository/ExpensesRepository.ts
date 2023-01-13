@@ -8,36 +8,32 @@ export default new class ExpensesRepository {
     return findExpenses
   }
 
-  async findOne({ id }: any){
-    const findExpense = await prisma.expenses.findUnique({
+  async findOne(id: any){
+    const expense: any = await prisma.expenses.findUnique({
       where: {
-        id
+        id: id
       }
     })
-
-    return findExpense
+    return expense
   }
 
-  async create({ title }: any){
+  async create(title: any){
 
     const createExpense = await prisma.expenses.create({
         data: {
-            title
+            title: title
         }
     })
-
     return createExpense
   }
 
-  async delete({ id }: any){
+  async delete(id: any){
       const expense = await prisma.expenses.delete({
         where: {
-          id
+          id: id
         }
       })
 
       return expense
   }
-
-
 }
