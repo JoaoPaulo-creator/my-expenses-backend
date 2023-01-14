@@ -1,5 +1,3 @@
-
-import { Expenses } from "@prisma/client"
 import ExpensesRepository from "../repository/ExpensesRepository"
 
 export default new class DeleteExpenseService {

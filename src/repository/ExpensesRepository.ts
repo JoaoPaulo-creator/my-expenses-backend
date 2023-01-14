@@ -17,14 +17,29 @@ export default new class ExpensesRepository {
     return expense
   }
 
-  async create(title: any){
+  async create(title: any, spendingAmount: any){
 
     const createExpense = await prisma.expenses.create({
         data: {
-            title: title
+          title: title,
+          spendingAmount: spendingAmount
         }
     })
     return createExpense
+  }
+
+  async update(id: any, {title, spendingAmount} :any){
+    const expense = await prisma.expenses.update({
+      where: {
+        id
+      },
+       data: {
+        title,
+        spendingAmount
+       }
+    })
+
+    return expense
   }
 
   async delete(id: any){
