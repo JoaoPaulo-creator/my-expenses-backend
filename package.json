@@ -10,8 +10,8 @@
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.15",
     "@types/pg": "^8.6.6",
-    "nodemon": "^2.0.20",
-    "prisma": "^4.8.1"
+    "prisma": "^4.8.1",
+    "tsx": "^3.12.2"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon ./src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "migrate": "prisma migrate dev --name",
     "prisma:studio": "npx prisma studio"
   }
