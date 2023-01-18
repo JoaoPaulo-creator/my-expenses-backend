@@ -4,23 +4,20 @@ import { requetBody } from "../utils/request-body-validation"
 import { z } from "zod"
 
 
-export default new class ExpenseController {
+export async function create(req: Request, res: Response){
 
-  async store(req: Request, res: Response){
+  try {
 
-    try {
+    const { title, spendingAmount } = requetBody.parse(req.body)
+    const expense = await CreateExpenseSerive.create(title, spendingAmount)
 
-      const { title, spendingAmount } = requetBody.parse(req.body)
-      const expense = await CreateExpenseSerive.create(title, spendingAmount)
+    return res.status(201).json(expense)
 
-      return res.status(201).json(expense)
+  } catch (error) {
+    if(error instanceof z.ZodError){
+      const { issues } = error
 
-    } catch (error) {
-      if(error instanceof z.ZodError){
-        const { issues } = error
-
-        return res.status(422).json(issues)
-      }
+      return res.status(422).json(issues)
     }
   }
 }
