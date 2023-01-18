@@ -24,7 +24,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/index.ts",
-    "migrate": "prisma migrate dev --name",
+    "prisma:migrate": "prisma migrate dev --name",
     "prisma:studio": "npx prisma studio"
   },
   "repository": {

@@ -4,7 +4,6 @@ CREATE TABLE "Expenses" (
     "title" TEXT NOT NULL,
     "spendingAmount" DOUBLE PRECISION NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Expenses_pkey" PRIMARY KEY ("id")
 );
