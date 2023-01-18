@@ -1,4 +1,4 @@
-import { prisma } from "../infra/PrismaService"
+import { prisma } from "../lib/prisma"
 
 
 export default new class ExpensesRepository {
@@ -17,7 +17,7 @@ export default new class ExpensesRepository {
     return expense
   }
 
-  async create(title: any, spendingAmount: any){
+  async create(title: string, spendingAmount: number){
 
     const createExpense = await prisma.expenses.create({
         data: {

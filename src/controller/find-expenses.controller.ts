@@ -1,5 +1,4 @@
 import { Request, Response } from "express"
-import { prisma } from "../infra/PrismaService"
 import FindAllExpensesService from "../services/find-all-expenses.service"
 
 export default new class FindExpensesController {
