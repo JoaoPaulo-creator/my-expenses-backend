@@ -8,7 +8,7 @@ export default new class DeleteExpenseController {
   async delete(req: Request, res: Response) {
 
     try {
-      const {id}: any = req.params
+      const { id }= req.params
       await deleteExpenseService.delete(id)
 
       return res.sendStatus(204)
