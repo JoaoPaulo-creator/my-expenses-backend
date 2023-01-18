@@ -1,5 +1,4 @@
-import { Request, response, Response } from "express"
-import { prisma } from "../infra/PrismaService"
+import { Request, Response } from "express"
 import deleteExpenseService from "../services/delete-expense.service"
 
 
