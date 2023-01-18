@@ -1,7 +1,8 @@
- import ExpensesRepository from "../repository/ExpensesRepository";
+import ExpensesRepository from "../repository/ExpensesRepository";
 
 export default new class FindOneExpenseService {
-  async findOne(id: any){
+
+  async findOne(id: string){
     return await ExpensesRepository.findOne(id)
   }
 }

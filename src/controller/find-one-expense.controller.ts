@@ -1,4 +1,3 @@
-import { prisma } from "../infra/PrismaService";
 import { Request, Response } from "express";
 import findOneExpenseService from "../services/find-one-expense.service";
 
@@ -7,7 +6,7 @@ export default new class FindOneExpenseController {
   async index(req: Request, res: Response){
 
     try {
-      const { id }: any = req.params
+      const { id } = req.params
       const expense = await findOneExpenseService.findOne(id)
 
       if(!expense){
