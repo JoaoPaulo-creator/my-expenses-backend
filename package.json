@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "author": "Joao Paulo",
+  "public": false,
   "license": "MIT",
   "private": true,
   "devDependencies": {
@@ -25,5 +26,15 @@
     "dev": "tsx watch src/index.ts",
     "migrate": "prisma migrate dev --name",
     "prisma:studio": "npx prisma studio"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoaoPaulo-creator/my-expenses-backend.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/JoaoPaulo-creator/my-expenses-backend/issues"
+  },
+  "homepage": "https://github.com/JoaoPaulo-creator/my-expenses-backend#readme",
+  "description": ""
 }
