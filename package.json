@@ -25,7 +25,8 @@
     "build": "tsc",
     "dev": "tsx watch src/index.ts",
     "prisma:migrate": "prisma migrate dev --name",
-    "prisma:studio": "npx prisma studio"
+    "prisma:studio": "npx prisma studio",
+    "prd:start": "node build/index.js"
   },
   "repository": {
     "type": "git",
